@@ -41,3 +41,33 @@ function altCaps(str) {
 }
 
 altCaps("hello"); // HeLlO
+
+// 5. Write a function that takes a string as an argument and returns the string with the first letter of every word capitalized.
+
+function capitalize(str) {
+  let newStr = "";
+  for (let i = o; i < str.length; i++) {
+    if (i === 0 || str[i - 1] === " ") {
+      newStr += str[i].toUpperCase();
+    }
+  }
+  return newStr;
+}
+
+capitalize("hello world"); // Hello World
+
+// 6. Write a function that takes a string as an argument and returns the string with all of the vowels removed.
+
+function removeVowels(str) {
+  let vowels = "aeiou";
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i].toLowerCase();
+    if (vowels.indexOf(char) === -1) {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+}
+
+removeVowels("hello world"); // hll wrld
