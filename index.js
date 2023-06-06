@@ -71,3 +71,35 @@ function removeVowels(str) {
 }
 
 removeVowels("hello world"); // hll wrld
+
+// 7. Write a function that takes a string as an argument and returns the string with all of the consonants removed.
+
+function removeConsonants(str) {
+  let vowels = "aeiou";
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i].toLowerCase();
+    if (vowels.indexOf(char) !== -1) {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+}
+
+removeConsonants("hello world"); // eo oo
+
+// 8. Write a function that takes a string as an argument and returns the string with all of the vowels and consonants reversed.
+
+function reverseVowels(str) {
+  let vowels = "aeiou";
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i].toLowerCase();
+    if (vowels.indexOf(char) !== -1) {
+      newStr += str[i];
+    }
+  }
+  return newStr.split("").reverse().join("");
+}
+
+reverseVowels("hello world"); // olle
