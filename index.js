@@ -115,4 +115,15 @@ function capitalizeWords(str) {
       newStr += str[i];
     }
   }
+  return newStr;
 }
+
+capitalizeWords("hello world"); // Hello World
+
+// 10. Write a function that takes a string as an argument and returns the string with all of the words reversed.
+
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");
+}
+
+reverseWords("hello world"); // world hello
