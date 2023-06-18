@@ -174,3 +174,15 @@ function fizzbuzz(n) {
     }
   }
 }
+
+// 14. Write a function that takes an array of numbers as an argument and returns the smallest number in the array.
+
+function smallest(arr) {
+  let smallest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+  return smallest;
+}
