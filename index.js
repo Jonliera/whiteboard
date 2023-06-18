@@ -186,3 +186,29 @@ function smallest(arr) {
   }
   return smallest;
 }
+
+//15. Write a function that takes an array of numbers as an argument and returns the largest number in the array.
+
+function largest(arr) {
+  let largest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
+    }
+  }
+  return largest;
+}
+
+//16. Write a function that takes an array of numbers as an argument and returns the sum of all of the numbers in the array.
+
+function sum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
+function sum(arr) {
+  return arr.reduce((acc, curr) => acc + curr, 0);
+}
