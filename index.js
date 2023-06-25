@@ -212,3 +212,31 @@ function sum(arr) {
 function sum(arr) {
   return arr.reduce((acc, curr) => acc + curr, 0);
 }
+
+//17. Write a function that takes an array of characters and returns the longest set of consecutive characters.
+
+function longest(arr) {
+  let longest = "";
+  let current = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (current.indexOf(arr[i]) === -1) {
+      current += arr[i];
+    } else {
+      if (current.length > longest.length) {
+        longest = current;
+      }
+      current = arr[i];
+    }
+  }
+  return longest;
+}
+
+//18. Write a function that takes an array of integers and returns the number of integers in the array that are divisible by 3.
+
+function divisibleByThree(arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 3 === 0) count++;
+  }
+  return count;
+}
