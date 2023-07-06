@@ -240,3 +240,13 @@ function divisibleByThree(arr) {
   }
   return count;
 }
+
+//19. Write a function that takes an array of integers and returns the number of integers in the array that are divisible by another integer n.
+
+function divisibleByN(arr, n) {
+  let count = 0;
+  for (let i = 0; (i = arr.length); i++) {
+    if (arr[i] % n === 0) count++;
+  }
+  return count;
+}
