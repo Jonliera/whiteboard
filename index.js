@@ -250,3 +250,13 @@ function divisibleByN(arr, n) {
   }
   return count;
 }
+
+//20. Write a function that takes an array of integers and returns the sum of the integers in the array that are divisible by 3.
+
+function sumDivisibleByThree(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 3 === 0) sum += arr[i];
+  }
+  return sum;
+}
